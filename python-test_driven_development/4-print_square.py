@@ -1,4 +1,4 @@
-"""Module that prints a square with '#'"""
+"""Module that prints a square with '#' characters"""
 
 def print_square(size):
     """Prints a square of size 'size' using '#' characters"""
