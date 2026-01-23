@@ -1,4 +1,4 @@
-Python Projects Repository
+🐍 Python Projects Repository
 
 This repository includes a collection of Python projects designed to build strong fundamentals in Python programming.
 The projects gradually progress from basic concepts to more advanced topics such as data structures, exception handling, and test-driven development.
