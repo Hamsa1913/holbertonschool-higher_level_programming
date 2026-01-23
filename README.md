@@ -7,70 +7,70 @@ The repository is ideal for practice, revision, and showcasing Python skills.
 
 📂 Projects Overview
 
-python-hello_world
+🐣 python-hello_world
 Introductory Python exercises covering basic syntax, printing output, variables, and simple scripts.
 
-python-if_else_loops_functions
+🔄 python-if_else_loops_functions
 Projects focused on control flow and logic, including:
 
-if / else conditions
+✅ if / else conditions
 
-for and while loops
+🔁 for and while loops
 
-Function definitions and usage
+⚡ Function definitions and usage
 
-python-data_structures
+📊 python-data_structures
 Exercises related to core Python data structures:
 
-Lists
+📌 Lists
 
-Tuples
+📌 Tuples
 
-Dictionaries
+📌 Dictionaries
 
-Sets
+📌 Sets
 
-Common operations and manipulations
+✨ Common operations and manipulations
 
-python-more_data_structures
+🧩 python-more_data_structures
 Advanced data structure exercises involving:
 
-Nested lists
+🔹 Nested lists
 
-Complex dictionaries
+🔹 Complex dictionaries
 
-Lambda functions
+🔹 Lambda functions
 
-Map, filter, and reduce techniques
+🔹 Map, filter, and reduce techniques
 
-python-import_modules
+📦 python-import_modules
 Projects that demonstrate:
 
-Importing built-in and custom modules
+📥 Importing built-in and custom modules
 
-Using functions across files
+🔗 Using functions across files
 
-Understanding Python module structure
+🛠 Understanding Python module structure
 
-python-exceptions
+⚠️ python-exceptions
 Exercises covering error handling in Python, including:
 
-try, except, else, and finally
+🛑 try, except, else, and finally
 
-Custom exceptions
+✋ Custom exceptions
 
-Writing safe and reliable code
+✅ Writing safe and reliable code
 
-python-test_driven_development
+🧪 python-test_driven_development
 Projects that focus on Test-Driven Development (TDD):
 
-Writing tests before implementation
+📝 Writing tests before implementation
 
-Using unittest
+🔬 Using unittest
 
-Using doctest
+🧾 Using doctest
 
-Building well-tested and maintainable code
+💪 Building well-tested and maintainable code
 
 ▶️ How to Run
 
@@ -78,23 +78,19 @@ Each project folder contains Python scripts and (when applicable) test files.
 
 Running unit tests:
 python3 -m unittest tests/6-max_integer_test.py
-
 Running doctests:
 python3 -m doctest ./tests/5-text_indentation.txt
-
 
 Make sure you are using Python 3.
 
 ✨ Purpose
+💡 Strengthen Python fundamentals
 
-Strengthen Python fundamentals
+🖊 Practice clean and readable code
 
-Practice clean and readable code
+✅ Apply test-driven development principles
 
-Apply test-driven development principles
-
-Build a solid base for advanced Python projects
+🚀 Build a solid base for advanced Python projects
 
 👩‍💻 Author
-
 Hamsa Alammar
