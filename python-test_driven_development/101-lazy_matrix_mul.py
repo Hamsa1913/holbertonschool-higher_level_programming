@@ -8,68 +8,66 @@ import numpy as np
 
 def lazy_matrix_mul(m_a, m_b):
     """
-    Multiplies two matrices using NumPy.
+    Multiplies two matrices using NumPy
     
     Args:
-        m_a (list of lists): First matrix
-        m_b (list of lists): Second matrix
-        
+        m_a: First matrix (list of lists)
+        m_b: Second matrix (list of lists)
+    
     Returns:
-        numpy.ndarray: Result of matrix multiplication
-        
+        The product of the two matrices as a NumPy array
+    
     Raises:
-        TypeError: If matrices are not valid
-        ValueError: If matrices cannot be multiplied or are empty
+        TypeError: If matrices are not lists of lists,
+                   or if elements are not integers/floats,
+                   or if matrices are not rectangular
+        ValueError: If matrices cannot be multiplied
     """
-    # Validate m_a
+    
+    # Validate input types
     if not isinstance(m_a, list):
         raise TypeError("m_a must be a list")
-    if not all(isinstance(row, list) for row in m_a):
-        raise TypeError("m_a must be a list of lists")
-    if m_a == [] or m_a == [[]]:
-        raise ValueError("m_a can't be empty")
-    
-    # Validate m_b  
     if not isinstance(m_b, list):
         raise TypeError("m_b must be a list")
+    
+    if not all(isinstance(row, list) for row in m_a):
+        raise TypeError("m_a must be a list of lists")
     if not all(isinstance(row, list) for row in m_b):
         raise TypeError("m_b must be a list of lists")
+    
+    # Check if matrices are empty
+    if m_a == [] or m_a == [[]]:
+        raise ValueError("m_a can't be empty")
     if m_b == [] or m_b == [[]]:
         raise ValueError("m_b can't be empty")
     
-    # Validate elements in m_a
-    row_len_a = None
+    # Validate matrix contents
     for row in m_a:
-        if row_len_a is None:
-            row_len_a = len(row)
-        elif len(row) != row_len_a:
-            raise TypeError("each row of m_a must be of the same size")
-        
-        for element in row:
-            if not isinstance(element, (int, float)):
-                raise TypeError("m_a should contain only integers or floats")
+        if not all(isinstance(elem, (int, float)) for elem in row):
+            raise TypeError("m_a should contain only integers or floats")
     
-    # Validate elements in m_b
-    row_len_b = None
     for row in m_b:
-        if row_len_b is None:
-            row_len_b = len(row)
-        elif len(row) != row_len_b:
-            raise TypeError("each row of m_b must be of the same size")
-        
-        for element in row:
-            if not isinstance(element, (int, float)):
-                raise TypeError("m_b should contain only integers or floats")
+        if not all(isinstance(elem, (int, float)) for elem in row):
+            raise TypeError("m_b should contain only integers or floats")
+    
+    # Check if all rows have the same length (rectangular matrices)
+    row_len_a = len(m_a[0])
+    if not all(len(row) == row_len_a for row in m_a):
+        raise TypeError("each row of m_a must be of the same size")
+    
+    row_len_b = len(m_b[0])
+    if not all(len(row) == row_len_b for row in m_b):
+        raise TypeError("each row of m_b must be of the same size")
     
     # Check if matrices can be multiplied
-    if row_len_a != len(m_b):
+    if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     
-    # Convert to numpy arrays and multiply
+    # Convert to NumPy arrays and multiply
     try:
         np_a = np.array(m_a)
         np_b = np.array(m_b)
         result = np.matmul(np_a, np_b)
         return result
-    except ValueError:
-        raise ValueError("m_a and m_b can't be multiplied")
+    except ValueError as e:
+        raise ValueError("m_a and m_b can't be multiplied") from e
