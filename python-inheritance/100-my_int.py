@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""Module that defines a rebel integer class."""
+
+
 class MyInt(int):
-    """Rebel integer class"""
+    """Rebel integer class that inverts == and !="""
 
     def __eq__(self, other):
         return super().__ne__(other)
