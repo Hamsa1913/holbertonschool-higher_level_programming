@@ -52,4 +52,6 @@ print(s.size)      # 3
 print(s.position)  # (1, 2)
 print(s.area())    # 9
 s.my_print()
+
+
 Author : HAMSA ALAMMAR
