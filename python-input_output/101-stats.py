@@ -1,4 +1,11 @@
 #!/usr/bin/python3
+"""
+Script that reads stdin line by line and computes metrics:
+- Total file size
+- Number of lines by status code (200, 301, 400, 401, 403, 404, 405, 500)
+Prints statistics every 10 lines or on keyboard interruption (CTRL+C)
+"""
+
 import sys
 
 def print_stats(total_size, status_counts):
@@ -6,6 +13,7 @@ def print_stats(total_size, status_counts):
     print("File size: {}".format(total_size))
     for code in sorted(status_counts.keys()):
         print("{}: {}".format(code, status_counts[code]))
+
 
 status_codes = [200, 301, 400, 401, 403, 404, 405, 500]
 status_counts = {}
