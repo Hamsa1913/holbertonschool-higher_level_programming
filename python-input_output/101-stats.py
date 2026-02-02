@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""
-Script that reads stdin line by line and computes metrics:
-- Total file size
-- Number of lines by status code (200, 301, 400, 401, 403, 404, 405, 500)
-Prints statistics every 10 lines or on keyboard interruption (CTRL+C)
-"""
+"""Log parsing script that reads stdin and computes metrics."""
 
 import sys
 
@@ -26,7 +21,6 @@ try:
         parts = line.strip().split()
         if len(parts) < 7:
             continue
-        # Extract status code and file size
         try:
             status = int(parts[-2])
             size = int(parts[-1])
