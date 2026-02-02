@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Log parsing script that reads stdin and computes metrics."""
+"""
+Script that reads stdin line by line and computes metrics:
+- Total file size
+- Number of lines by status code (200, 301, 400, 401, 403, 404, 405, 500)
+Prints statistics every 10 lines or on keyboard interruption (CTRL+C)
+"""
 
 import sys
 
