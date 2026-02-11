@@ -132,5 +132,4 @@ Helpful resources used throughout this learning journey:
 - pycodestyle Documentation
 
 👩‍💻 Author : 
-
-## Hamsa Alammar
+Hamsa Alammar
