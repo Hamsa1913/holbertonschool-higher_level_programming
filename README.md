@@ -98,15 +98,15 @@ Each folder contains Python scripts and (when applicable) test files.
 
 ▶️ Running Python scripts
 
----python3 filename.py ---
+python3 filename.py 
 
 🧪 Running unit tests
 
----python3 -m unittest tests/6-max_integer_test.py---
+python3 -m unittest tests/6-max_integer_test.py
 
 🧾 Running doctests
 
----python3 -m doctest ./tests/5-text_indentation.txt---
+python3 -m doctest ./tests/5-text_indentation.txt
 
 📚 Resources
 
