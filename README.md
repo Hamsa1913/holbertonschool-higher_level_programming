@@ -131,5 +131,6 @@ Helpful resources used throughout this learning journey:
 - PEP 8 Style Guide
 - pycodestyle Documentation
 
-👩‍💻 Author
-##Hamsa Alammar
+👩‍💻 Author : 
+
+## Hamsa Alammar
