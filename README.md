@@ -108,6 +108,8 @@ python3 -m unittest tests/6-max_integer_test.py
 
 python3 -m doctest ./tests/5-text_indentation.txt
 
+```
+
 📚 Resources
 
 Some helpful references used during this learning journey:
@@ -115,6 +117,8 @@ Some helpful references used during this learning journey:
 - Python Official Tutorial
 -Python String Formatting Guide
 -pycodestyle Documentation
+
+```
 
 👩‍💻 Author
 Hamsa Alammar
