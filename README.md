@@ -1,96 +1,120 @@
-🐍 Python Projects Repository
+# 🐍 Python Projects Repository
 
-This repository includes a collection of Python projects designed to build strong fundamentals in Python programming.
-The projects gradually progress from basic concepts to more advanced topics such as data structures, exception handling, and test-driven development.
+Welcome to my **Python Projects Repository**!  
+This repository contains multiple Python projects designed to build strong fundamentals in Python programming, starting from basic syntax and gradually progressing into more advanced concepts like data structures, exceptions, and test-driven development.
 
-The repository is ideal for practice, revision, and showcasing Python skills.
+It is ideal for practice, revision, and showcasing Python skills.
 
-📂 Projects Overview
+---
 
-🐣 python-hello_world
-Introductory Python exercises covering basic syntax, printing output, variables, and simple scripts.
+## 📌 Project Overview
 
-🔄 python-if_else_loops_functions
+### 🐣 python-hello_world
+Introductory Python exercises covering:
+- Python interpreter basics
+- Printing output
+- Variables and simple scripts
+- Strings, indexing, and slicing
+
+---
+
+### 🔄 python-if_else_loops_functions
 Projects focused on control flow and logic, including:
+- if / else conditions
+- for and while loops
+- Function definitions and usage
 
-✅ if / else conditions
+---
 
-🔁 for and while loops
-
-⚡ Function definitions and usage
-
-📊 python-data_structures
+### 📊 python-data_structures
 Exercises related to core Python data structures:
+- Lists
+- Tuples
+- Dictionaries
+- Sets
+- Common operations and manipulations
 
-📌 Lists
+---
 
-📌 Tuples
-
-📌 Dictionaries
-
-📌 Sets
-
-✨ Common operations and manipulations
-
-🧩 python-more_data_structures
+### 🧩 python-more_data_structures
 Advanced data structure exercises involving:
+- Nested lists
+- Complex dictionaries
+- Lambda functions
+- Map, filter, and reduce techniques
 
-🔹 Nested lists
+---
 
-🔹 Complex dictionaries
-
-🔹 Lambda functions
-
-🔹 Map, filter, and reduce techniques
-
-📦 python-import_modules
+### 📦 python-import_modules
 Projects that demonstrate:
+- Importing built-in and custom modules
+- Using functions across multiple files
+- Understanding Python module structure
 
-📥 Importing built-in and custom modules
+---
 
-🔗 Using functions across files
-
-🛠 Understanding Python module structure
-
-⚠️ python-exceptions
+### ⚠️ python-exceptions
 Exercises covering error handling in Python, including:
+- try, except, else, and finally
+- Custom exceptions
+- Writing safe and reliable code
 
-🛑 try, except, else, and finally
+---
 
-✋ Custom exceptions
-
-✅ Writing safe and reliable code
-
-🧪 python-test_driven_development
+### 🧪 python-test_driven_development
 Projects that focus on Test-Driven Development (TDD):
+- Writing tests before implementation
+- Using unittest
+- Using doctest
+- Building well-tested and maintainable code
 
-📝 Writing tests before implementation
+---
 
-🔬 Using unittest
+## 🎯 Learning Objectives
 
-🧾 Using doctest
+By working through this repository, you will learn how to:
 
-💪 Building well-tested and maintainable code
+- Use the Python interpreter confidently
+- Print text and variables using `print()`
+- Work with strings effectively
+- Apply indexing and slicing to extract parts of strings
+- Follow Python style conventions (PEP 8)
+- Validate code quality using `pycodestyle`
+- Practice test-driven development using `unittest` and `doctest`
 
-▶️ How to Run
+---
 
-Each project folder contains Python scripts and (when applicable) test files.
+## ✅ Requirements
 
-Running unit tests:
-python3 -m unittest tests/6-max_integer_test.py
-Running doctests:
-python3 -m doctest ./tests/5-text_indentation.txt
+- All scripts must be executable
+- The first line of every script must be exactly:
 
-Make sure you are using Python 3.
+```bash
+#!/usr/bin/python3
+- Code must follow PEP 8 standards
+🛠️ Usage
 
-✨ Purpose
-💡 Strengthen Python fundamentals
+Each folder contains Python scripts and (when applicable) test files.
 
-🖊 Practice clean and readable code
+▶️ Running Python scripts
 
-✅ Apply test-driven development principles
+---python3 filename.py ---
 
-🚀 Build a solid base for advanced Python projects
+🧪 Running unit tests
+
+---python3 -m unittest tests/6-max_integer_test.py---
+
+🧾 Running doctests
+
+---python3 -m doctest ./tests/5-text_indentation.txt---
+
+📚 Resources
+
+Some helpful references used during this learning journey:
+
+- Python Official Tutorial
+-Python String Formatting Guide
+-pycodestyle Documentation
 
 👩‍💻 Author
 Hamsa Alammar
