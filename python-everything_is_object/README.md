@@ -73,3 +73,7 @@ Run each task file individually to see the result:
 ```bash
 chmod +x <file>.py
 ./<file>.py
+----------------------------------------------------
+
+## Blog Post Links
+- LinkedIn: [Python3: Everything is an Object](https://www.linkedin.com/posts/hamsa-al-amaar_this-is-a-project-i-completed-as-part-of-activity-7446494068039110656-FeRe?utm_source=share&utm_medium=member_desktop&rcm=ACoAADI4aikB_MsKdE8YLU-JEzwKMziNBzGB2Kc)
