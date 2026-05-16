@@ -1,0 +1,189 @@
+# Flex Sight — Temperature Monitoring & Alert System
+### STAGE 1 REPORT
+
+This report documents the formation, ideation, and design of **Flex Sight** — a lightweight embedded temperature monitoring system built around a clear core workflow: **MQTT/API → Server → Dashboard Alert**. The system is designed to detect abnormal temperature levels early, trigger instant alerts at approximately **50°C**, and improve safety response across operational environments such as server rooms, warehouses, and industrial facilities.
+
+---
+
+## 1. Team Formation Overview
+
+### 1.1 Kickoff Meeting
+
+The project began with an initial team meeting to introduce members and align expectations.
+
+**Objectives:**
+- Introduce all team members and share each member's background, strengths, and interests
+- Discuss individual learning goals and expected contributions
+- Present the project idea, vision, and objectives
+- Ensure everyone understands the project scope and workflow
+
+### 1.2 Team Members and Roles
+
+The project team was structured around the main system workflow — **MQTT/API → Server → Dashboard Alert** — with each role aligned to a specific component of the pipeline.
+
+| # | Role | Assigned To | Responsibilities |
+|---|------|-------------|-----------------|
+| 1 | Project Lead & System Architecture | Rabea Younis Thabit | Overall project coordination, system design, architecture decisions, and task distribution. |
+| 2 | Embedded Systems & Sensor Integration | Hanin Taqi Al Sayed Hassan | Hardware setup, sensor integration, and embedded systems development. |
+| 3 | Server & Backend Development | Munirah Enad Alotaibi | Server-side logic, API development, threshold processing, and alert management. |
+| 4 | Dashboard & Alert Management | Hamsa Bnian Alammar | Dashboard interface, alert display, and frontend development. |
+| 5 | Documentation & Presentation | Rabea Younis Thabit | Technical writing, report preparation, and presentation materials. |
+
+### 1.3 Collaboration Strategy
+
+**Communication Tools:**
+
+| Tool | Purpose |
+|------|---------|
+| WhatsApp | Quick updates and daily communication |
+| Discord | Technical discussions and file sharing |
+| Google Meet | Remote meetings and team alignment |
+| In-person meetings | Brainstorming and progress reviews |
+
+**Documentation & Decision-Making Tools:**
+
+| Tool | Purpose |
+|------|---------|
+| Google Docs | Collaborative report writing and editing |
+| Canva | Presentation slides and visual materials |
+| GitHub | File organisation and version control |
+
+**Communication Rules:**
+- Respond to messages within 2 hours during working hours
+- Attend all scheduled meetings; inform the team at least 1 hour in advance of any absence
+- Raise blockers or delays immediately to avoid bottlenecks
+- Maintain respectful and professional communication at all times
+
+**Decision-Making Process:** Decisions are made through group discussion. If consensus is not reached, the team uses voting to select the most suitable option based on feasibility, clarity, and alignment with project goals.
+
+---
+
+## 2. Ideas Explored
+
+### 2.1 Brainstorming Process
+
+The team conducted structured brainstorming sessions focused on real-world problems in temperature monitoring, fire risk detection, and early safety alerts. Several techniques were used to explore and compare ideas:
+
+- **Mind Mapping** — Organised main concepts, system components, communication methods, and alert features visually.
+- **"How Might We" Questions** — Explored practical ways to detect abnormal temperature levels and send alerts efficiently.
+- **Research-Based Discussions** — Focused on safety challenges, delayed fire detection, and the importance of real-time dashboard alerts.
+- **SCAMPER** — Applied to explore how existing monitoring systems could be Substituted, Combined, Adapted, Modified, Put to other uses, Eliminated, or Reversed to better fit the Flex Sight requirements.
+
+### 2.2 Ideas Generated and Evaluated
+
+| Idea | Description | Strengths | Weaknesses | Reason for Rejection |
+|------|-------------|-----------|------------|----------------------|
+| Smart AI Camera | Camera-based system to detect risks using AI analysis | High impact; detects multiple risk types; scalable | Complex AI development; high cost; beyond MVP scope | Too complex for current MVP stage |
+| Full Fire Detection System | Combines heat, smoke, and flame sensors for comprehensive fire monitoring | Comprehensive coverage; high accuracy | Multiple sensors needed; exceeds timeline and team capacity | Requires more hardware testing than timeline allows |
+| Mobile Alert Application | Mobile app sending alerts directly to smartphones | Improves accessibility; remote monitoring | Adds complexity; dashboard alerts already cover the core use case | Not essential for first MVP |
+| **Flex Sight ✅** | Temperature monitoring via MQTT/API with real-time dashboard alerts at ~50°C | Simple; low cost; scalable; technically aligned | Depends on internet; requires calibration; fixed threshold | **Selected** |
+
+### 2.3 Evaluation Summary
+
+| Idea | Feasibility | Impact | Technical Alignment | Scalability | MVP Simplicity | Total |
+|------|------------|--------|---------------------|-------------|----------------|-------|
+| Smart AI Camera | 2 | 5 | 3 | 5 | 2 | 17 |
+| Full Fire Detection System | 3 | 5 | 4 | 5 | 2 | 19 |
+| Mobile Alert Application | 4 | 3 | 4 | 3 | 4 | 18 |
+| **Flex Sight** | **5** | **4** | **5** | **5** | **5** | **24** |
+
+---
+
+## 3. Selected MVP Concept
+
+### 3.1 MVP Summary
+
+**Flex Sight** is a simple embedded monitoring system designed to continuously measure temperature levels and support early safety alerts in operational environments. Temperature data is transmitted through MQTT/API to the server, where readings are processed and checked against a defined threshold. When the temperature reaches approximately **50°C**, the system automatically triggers an instant dashboard alert.
+
+**Core workflow:** MQTT/API → Server → Dashboard Alert
+
+### 3.2 Reasons for Selection
+
+| Criteria | Justification |
+|----------|--------------|
+| Feasibility | Can be built using available hardware components and beginner-friendly software tools within the project timeline. |
+| Simplicity | Clear and focused MVP workflow with no unnecessary complexity. |
+| Technical Alignment | Fits the team's current skills in embedded systems, backend development, and dashboard design. |
+| Scalability | Architecture supports future expansion with additional sensors, locations, and AI integration. |
+| Real-World Impact | Directly addresses a safety problem in operational environments. |
+
+### 3.3 Technical Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| Hardware | Arduino Uno + DHT11 Sensor | Continuously reads temperature data from the environment |
+| Communication | MQTT / REST API | Lightweight, real-time data transmission from device to server |
+| Backend / Server | Python (Flask) | Receives sensor data, processes readings, checks the 50°C threshold, manages alert logic |
+| Database | SQLite | Stores temperature readings, alert logs, and device records |
+| Frontend / Dashboard | HTML + CSS + JavaScript | Displays live readings, device status, and instant alerts |
+
+### 3.4 Target Audience
+
+| User Type | Description |
+|-----------|-------------|
+| Facility Managers | Responsible for monitoring operational environments such as server rooms, warehouses, and factories. Need centralised visibility and instant alerts. |
+| Safety Teams | Monitor dashboard alerts, respond to incidents, and make fast decisions based on real-time temperature data. |
+| Technical Operators | Oversee device status, review historical readings, and ensure sensor calibration and system uptime. |
+| Organisation Owners | Require high-level visibility of safety metrics and alert history across their facilities. |
+
+### 3.5 Main Features
+
+- Real-time temperature monitoring
+- Automatic dashboard alerts when temperature reaches ~50°C
+- MQTT/API communication between sensor and server
+- Centralised monitoring interface with live readings
+- Device status visibility
+- Historical reading storage and logging
+- Lightweight and scalable architecture
+
+### 3.6 Potential Challenges and Opportunities
+
+**Challenges:**
+- Requires stable internet connectivity for real-time data transmission
+- Sensor calibration and testing needed to ensure accurate readings
+- Fixed 50°C threshold may require adjustment depending on the environment
+- System requires continuous power supply
+
+**Opportunities:**
+- Low-cost implementation makes the solution accessible to many sectors
+- Growing demand for IoT-based safety systems in industrial and commercial environments
+- Architecture can be expanded to support smoke, flame, and humidity sensors
+- Future AI integration can improve prediction and early risk detection
+- Multi-location monitoring can be added to support large facilities
+
+### 3.7 Expected Outcomes
+
+| Outcome | Target |
+|---------|--------|
+| Temperature alert response time | Under 5 seconds from threshold breach |
+| Dashboard availability | Continuous real-time display |
+| Alert accuracy | Reliable detection at the 50°C threshold |
+| System uptime | Stable operation throughout testing phase |
+| Future scalability | Ready for additional sensors and locations |
+
+---
+
+## 4. Future Expansion
+
+Future versions of Flex Sight may include:
+- Smoke and flame sensors
+- AI-based risk analysis
+- Camera integration
+- Multi-location monitoring
+- Mobile notifications
+- Advanced reporting and analytics
+
+These enhancements can transform Flex Sight into a more advanced smart safety and monitoring platform.
+
+---
+
+## 5. Conclusion
+
+Flex Sight is a practical and scalable temperature monitoring solution designed to improve operational safety through real-time monitoring and instant dashboard alerts.
+
+The project combines embedded systems, MQTT/API communication, server-side processing, and dashboard monitoring into one efficient workflow that supports early risk detection and faster response in operational environments.
+
+---
+
+*Report prepared by: Rabea Younis Thabit, Hanin Taqi Al Sayed Hassan, Munirah Enad Alotaibi, Hamsa Bnian Alammar*  
+*Stage 1 – Portfolio Project | Tuwaiq Academy (Camp Holberton)*
